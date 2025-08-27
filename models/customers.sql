@@ -1,3 +1,9 @@
+{{
+  config(
+    materialized='view'
+  )
+}}
+
 with customers as (
 
     select
@@ -5,7 +11,7 @@ with customers as (
         first_name,
         last_name
 
-    from `dbt-tutorial`.jaffle_shop.customers
+    from `dbt-tutorial.jaffle_shop.customers`
 
 ),
 
@@ -17,7 +23,7 @@ orders as (
         order_date,
         status
 
-    from `dbt-tutorial`.jaffle_shop.orders
+    from `dbt-tutorial.jaffle_shop.orders`
 
 ),
 
