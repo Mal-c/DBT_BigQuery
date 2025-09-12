@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+    - name: stripe
+      description: Stripe replica
+      database: dbt-tutorial             # <project/db name for Stripe>
+      schema: stripe        # <dataset/schema for the payments table>
+      tables:
+      - name: payment
+        description: One record per payment
+       
