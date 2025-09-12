@@ -1,4 +1,2 @@
-  select  id AS customer_id,
-          orderid AS order_id,
-          amount
-   from {{ source('stripe', 'payment') }}
+select id as customer_id, orderid as order_id, amount
+from {{ source("stripe", "payment") }}
