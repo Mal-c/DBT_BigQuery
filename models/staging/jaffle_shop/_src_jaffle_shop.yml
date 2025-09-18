@@ -9,17 +9,19 @@ sources:
           - name: customers
             columns:
               - name: id
+                description: Primary key for customers data
                 data_tests:
                 - unique
                 - not_null
-            description: One record per customer.
+            description: Raw customers table. One record per customer.
           - name: orders
             columns:
               - name: id
+                description: Primary key for orders data
                 data_tests:
                 - not_null
                 - unique 
-            description: One record per order. Includes cancelled and deleted orders.
+            description: Raw orders table. One record per order. Includes cancelled and deleted orders.
             config:
               freshness:
                 warn_after:
