@@ -1,0 +1,4 @@
+{{ codegen.generate_source(schema_name= 'jaffle_shop', database_name= 'dbt-tutorial') }}
+
+
+-- run the preview func and copy paste the generated yaml file into a new source file
