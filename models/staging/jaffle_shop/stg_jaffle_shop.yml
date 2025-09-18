@@ -21,6 +21,13 @@ models:
               - placed
               - returned
               - return_pending 
+    - name: customer_id
+      data_tests:
+        - relationships:
+            field: customer_id
+            to: ref('stg_customers')
+      
+      
 
         
     
