@@ -1,5 +1,5 @@
 
-with payments as (
+with payment as (
 
     select * from {{ ref('stg_payment') }}
 
@@ -18,7 +18,7 @@ payment_orders as (
         order_id,
         sum(amount) as amount
 
-    from payments
+    from payment
 
     group by 1,2
 
